@@ -63,11 +63,14 @@ namespace TestApp
         {
             Button btn = sender as Button;
             string id = btn.Name;
-            List<Song> songs = AppRepository.getIntance().getSongsByCatId(id);
-            for (int j = songs.Count - 1; j >= 0; j--)
-            {
-                MessageBox.Show(songs[j].name);
-            }
+            //List<Song> songs = AppRepository.getIntance().getSongsByCatId(id);
+            //for (int i = songs.Count - 1; i >= 0; i--)
+            //{
+            //    SongItem addItem = new SongItem(
+            //        songs[i].id, songs[i].name, songs[i].singer, songs[i].composer,
+            //        songs[i].official, songs[i].quality, songs[i].view.ToString()
+            //        );
+            //}
         }
 
 
