@@ -39,7 +39,7 @@ namespace TestApp
             this.panelCat.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelCat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelCat.Location = new System.Drawing.Point(0, 0);
-            this.panelCat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelCat.Margin = new System.Windows.Forms.Padding(4);
             this.panelCat.Name = "panelCat";
             this.panelCat.Size = new System.Drawing.Size(222, 624);
             this.panelCat.TabIndex = 0;
@@ -54,15 +54,16 @@ namespace TestApp
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1081, 624);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panelCat);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
         }

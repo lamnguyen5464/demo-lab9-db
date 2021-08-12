@@ -2,6 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 using TestApp.Configs;
+using System.Windows.Forms;
 
 namespace TestApp.Helpers
 {
@@ -26,8 +27,14 @@ namespace TestApp.Helpers
             {
                 SqlCommand command = new SqlCommand(sqlCommand, sqlConnection);
                 command.Connection.Open();
-                command.ExecuteNonQuery();
-                sqlConnection.Close();
+                try
+                {
+                    command.ExecuteNonQuery();
+                    sqlConnection.Close();
+                }catch(SqlException e)
+                {
+                    MessageBox.Show(e.Message);
+                }
             }
         }
     }
