@@ -38,7 +38,7 @@ namespace TestApp
             return buttonCountry;
         }
 
-        public void AddCategories(string name)
+        public void AddCategories(string name, string id)
         {
             Button btn_add = new Button();
             btn_add.Text = name;
@@ -53,9 +53,16 @@ namespace TestApp
             btn_add.Size = new System.Drawing.Size(194, 45);
             btn_add.TabIndex = 3;
             btn_add.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            btn_add.UseVisualStyleBackColor = true;
-            //btn_add.Click += new EventHandler(this.button_Click);
+            btn_add.UseVisualStyleBackColor = false;
+            btn_add.Click += new EventHandler(this.button_Click);
             panelCountry.Controls.Add(btn_add);
+        }
+
+        private void button_Click(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            //List<Song> songs = AppRepository.getIntance().getSong;
+            //SongItem.
         }
 
 

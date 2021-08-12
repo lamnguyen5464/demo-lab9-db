@@ -40,7 +40,7 @@ namespace TestApp
                         addItem.num = categories.Count;
                         for (int j = categories.Count - 1; j >= 0; j--)
                         {
-                            addItem.AddCategories(categories[j].getName());
+                            addItem.AddCategories(categories[j].getName(), categories[j].getId());
                         }
                     }
                     panelCat.Controls.Add(addItem);
