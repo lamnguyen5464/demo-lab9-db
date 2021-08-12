@@ -37,6 +37,13 @@ namespace TestApp.Repos
         	return listModels;
         }
 
+        public List<Category> getCatOnId(String Id)
+        {
+            List<Category> list = new List<Category>();
+
+            return list;
+        }
+
         public void addModel(String name, String Id){
         	String sqlCommand = $"INSERT INTO Model Values({Id}, {name}";
         	DatabaseHelper.execute(sqlCommand);

@@ -18,6 +18,11 @@ namespace TestApp.Models
         {
             return this.name;
         }
+
+        public String getId()
+        {
+            return this.id;
+        }
         
     }
 }
