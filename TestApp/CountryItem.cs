@@ -14,6 +14,8 @@ namespace TestApp
     public partial class CountryItem : UserControl
     {
         private string name, id;
+        private bool open;
+        public int num;
         public CountryItem()
         {
             InitializeComponent();
@@ -25,6 +27,10 @@ namespace TestApp
             InitializeComponent();
             buttonCountry.Text = name;
             buttonCountry.Name = id;
+            panelCountry.Visible = false;
+            this.Height = buttonCountry.Height;
+            open = false;
+            num = 0;
         }
 
         public Button GetButton()
@@ -36,20 +42,47 @@ namespace TestApp
         {
             Button btn_add = new Button();
             btn_add.Text = name;
-            btn_add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            btn_add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             btn_add.Dock = System.Windows.Forms.DockStyle.Top;
             btn_add.FlatAppearance.BorderSize = 0;
             btn_add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            btn_add.ForeColor = System.Drawing.Color.LightGray;
+            btn_add.ForeColor = System.Drawing.Color.Black;
             btn_add.Location = new System.Drawing.Point(0, 135);
             btn_add.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             btn_add.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
             btn_add.Size = new System.Drawing.Size(194, 45);
             btn_add.TabIndex = 3;
             btn_add.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            btn_add.UseVisualStyleBackColor = false;
+            btn_add.UseVisualStyleBackColor = true;
             //btn_add.Click += new EventHandler(this.button_Click);
             panelCountry.Controls.Add(btn_add);
+        }
+
+
+        public void setHeight(int height)
+        {
+            panelCountry.Size = new Size(
+                panelCountry.Width, height
+                );
+        }
+
+        private void buttonCountry_Click(object sender, EventArgs e)
+        {
+            if (open == false)
+            {
+                this.Height += num * 45;
+                open = true;
+                panelCountry.Visible = true;
+                setHeight(num * 45);
+            }
+            else
+            {
+                this.Height -= num * 45;
+                open = false;
+                panelCountry.Visible = false;
+                setHeight(0);
+            }
+            
         }
 
     }

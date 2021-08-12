@@ -39,7 +39,7 @@ namespace TestApp
             this.panelCountry.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelCountry.Location = new System.Drawing.Point(0, 50);
             this.panelCountry.Name = "panelCountry";
-            this.panelCountry.Size = new System.Drawing.Size(199, 97);
+            this.panelCountry.Size = new System.Drawing.Size(199, 62);
             this.panelCountry.TabIndex = 3;
             // 
             // buttonCountry
@@ -54,6 +54,7 @@ namespace TestApp
             this.buttonCountry.TabIndex = 2;
             this.buttonCountry.Text = "Việt Nam";
             this.buttonCountry.UseVisualStyleBackColor = true;
+            this.buttonCountry.Click += new System.EventHandler(this.buttonCountry_Click);
             // 
             // CountryItem
             // 
