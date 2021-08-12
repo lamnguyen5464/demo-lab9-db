@@ -26,15 +26,17 @@ namespace TestApp.Repos
 
         public List<Country> getListCountries(){
         	List<Country> listModels = new List<Country>();
-            DataTable result = DatabaseHelper.query("SELECT * FROM Countries");
-            foreach (DataRow row in result.Rows)
-            {
-                String id = row["Id"].ToString();
-                String name = row["Name"].ToString();
-                Country model = new Country(id, name);
-                listModels.Add(model);
-            }
-        	return listModels;
+            //DataTable result = DatabaseHelper.query("SELECT * FROM Countries");
+            //foreach (DataRow row in result.Rows)
+            //{
+            //    String id = row["Id"].ToString();
+            //    String name = row["Name"].ToString();
+            //    Country model = new Country(id, name);
+            //    listModels.Add(model);
+            //}
+            listModels.Add(new Country("111", " Viet Nam"));
+            listModels.Add(new Country("123", " Au My"));
+            return listModels;
         }
 
         public List<Category> getCatOnId(String Id)
