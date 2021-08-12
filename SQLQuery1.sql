@@ -56,26 +56,26 @@ create table UserFavourite (
 
 -- Countries
 insert into Countries(name) values 
-('Viet nam'),( 'Âu Mỹ'),( 'Châu Á'), ('Khác')
+(N'Việt nam'),(N'Âu Mỹ'),(N'Châu Á'), (N'Khác')
 -- Categories
 insert into Categories(name) values 
-('Nhạc Trẻ'),
-('Trữ Tình'), 
-('Remix Việt'), 
-('Rap Việt'), 
-('Tiền Chiến'), 
-('Nhạc Trịnh'), 
-('Thiếu Nhi'), 
-('Nhạc Xưa')
+(N'Nhạc Trẻ'),
+(N'Trữ Tình'), 
+(N'Remix Việt'), 
+(N'Rap Việt'), 
+(N'Tiền Chiến'), 
+(N'Nhạc Trịnh'), 
+(N'Thiếu Nhi'), 
+(N'Nhạc Xưa')
 --Category Country
 insert into CategoryCountry(CountryId,CategoryId) values 
 (1,1), (1,2), (1,3), (1,4), (1,5), (1,6), (1,7), (1,8)
 
 --Songs
 insert into Songs(name,singer,official,quality) values 
-('Trong Túi Áo Anh', 'Khởi My', 0, 0 ),
-('Em Thật Là Ngốc', 'Vũ Duy Khánh', 0 ,0 ),
-('Hơn Cả Trái Đất', 'Ánh Minh', 1, 1)
+(N'Trong Túi Áo Anh', N'Khởi My', 0, 0 ),
+(N'Em Thật Là Ngốc', N'Vũ Duy Khánh', 0 ,0 ),
+(N'Hơn Cả Trái Đất', N'Ánh Minh', 1, 1)
 
 --Users
 insert into Users(username,password) values 
@@ -89,13 +89,38 @@ insert into UserFavourite(songId,userId) values
 -- create function
 
 
+
 -- create trigger
 
 
 -- create stored procedure
+-- 
+go
+create procedure fn_getCategoryByCountryId @countryId int
+as
+begin
+begin transaction
+set transaction isolation level repeatable read
+select * 
+from CategoryCountry cCountry
+join Categories c 
+on cCountry.CategoryId = c.Id
+where CountryId = @countryId
+commit transaction
+end
+ 
+exec dbo.fn_getCategoryByCountryId 1
+	
+
+
+-- Create
+
+
+
+-- Query
 
 
 
 
---use master 
---drop database MusicPlayer;
+use master 
+drop database MusicPlayer;

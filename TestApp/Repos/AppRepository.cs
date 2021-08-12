@@ -26,18 +26,14 @@ namespace TestApp.Repos
 
         public List<Country> getListCountries(){
         	List<Country> listModels = new List<Country>();
-            //DataTable result = DatabaseHelper.query("SELECT * FROM Countries");
-            //foreach (DataRow row in result.Rows)
-            //   {
-            //       String id = row["Id"].ToString();
-            //       String name = row["Name"].ToString();
-            //	Country model = new Country(id, name);
-            //	listModels.Add(model);
-            //   }
-            listModels.Add(new Country("1", "VietNam"));
-            listModels.Add(new Country("2", "UK"));
-            listModels.Add(new Country("3", "Han"));
-            listModels.Add(new Country("4", "Other"));
+            DataTable result = DatabaseHelper.query("SELECT * FROM Countries");
+            foreach (DataRow row in result.Rows)
+            {
+                String id = row["Id"].ToString();
+                String name = row["Name"].ToString();
+                Country model = new Country(id, name);
+                listModels.Add(model);
+            }
         	return listModels;
         }
 
