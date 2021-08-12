@@ -9,11 +9,11 @@ namespace TestApp.Repos
     class AppRepository
     {
         private static AppRepository instance = null;
+        private static Boolean isDEV = true;
         private AppRepository() { }
 
         //data-model
         // List<Model> listModels = new List<Model>()
-
 
         public static AppRepository getIntance()
         {
@@ -25,6 +25,7 @@ namespace TestApp.Repos
         }
 
         public List<Country> getListCountries(){
+            if (isDEV) return Country.getMockData();
         	List<Country> listModels = new List<Country>();
             DataTable result = DatabaseHelper.query("exec dbo.sp_getCountries");
             foreach (DataRow row in result.Rows)
@@ -39,6 +40,7 @@ namespace TestApp.Repos
 
         public List<Category> getCatOnId(String Id)
         {
+            if (isDEV) return Category.getMockData();
             List<Category> list = new List<Category>();
             String sqlString = $"exec dbo.fn_getCategoryByCountryId {Id}";
             DataTable result = DatabaseHelper.query(sqlString);
@@ -54,14 +56,22 @@ namespace TestApp.Repos
 
         public List<Song> getSongsByCatId(String Id)
         {
+            if (isDEV) return Song.getMockData();
             List<Song> list = new List<Song>();
-            Song song = new Song();
-            song.name = "Name 1";
-            song.id = "1";
-            list.Add(song);
+
+            String sqlString = $"exec dbo.sp_getSongsByCategoryId {Id}";
+            DataTable result = DatabaseHelper.query(sqlString);
+            foreach (DataRow row in result.Rows)
+            {
+                Song model = new Song();
+                model.id = row["Id"].ToString();
+                model.name = row["name"].ToString();
+                model.singer = row["singer"].ToString();
+                list.Add(model);
+            }
+
             return list;
         }
-
 
         public void addNewCountry(String name)
         {

@@ -17,6 +17,16 @@ namespace TestApp.Models
             this.name = name;
         }
 
+        public static List<Category> getMockData()
+        {
+            List<Category> list = new List<Category>();
+            list.Add(new Category("1", "Nhac tre"));
+            list.Add(new Category("2", "Nhac tre 2"));
+            list.Add(new Category("3", "Nhac tre 3"));
+            list.Add(new Category("4", "Nhac tre 4"));
+            return list;
+        }
+
         public String getId()
         {
             return this.id;

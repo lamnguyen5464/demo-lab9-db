@@ -43,6 +43,7 @@ namespace TestApp
         {
             Button btn_add = new Button();
             btn_add.Text = name;
+            btn_add.Name = id;
             btn_add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             btn_add.Dock = System.Windows.Forms.DockStyle.Top;
             btn_add.FlatAppearance.BorderSize = 0;
