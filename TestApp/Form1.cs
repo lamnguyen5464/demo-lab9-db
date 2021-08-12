@@ -42,6 +42,14 @@ namespace TestApp
         {
 
             countries = AppRepository.getIntance().getListCountries();
+
+            List<Category> list = AppRepository.getIntance().getCatOnId("1");
+            MessageBox.Show(list[0].getName());
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

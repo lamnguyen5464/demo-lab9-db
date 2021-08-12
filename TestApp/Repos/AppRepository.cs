@@ -40,6 +40,15 @@ namespace TestApp.Repos
         public List<Category> getCatOnId(String Id)
         {
             List<Category> list = new List<Category>();
+            String sqlString = $"exec dbo.fn_getCategoryByCountryId {Id}";
+            DataTable result = DatabaseHelper.query(sqlString);
+            foreach (DataRow row in result.Rows)
+            {
+                String id = row["Id"].ToString();
+                String name = row["Name"].ToString();
+                Category model = new Category(id, name);
+                list.Add(model);
+            }
 
             return list;
         }

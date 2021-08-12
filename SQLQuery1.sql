@@ -8,6 +8,7 @@ create table Songs (
 	name nvarchar(50),
 	composer nvarchar(50) default 'Unknown',
 	singer nvarchar(50) default 'Unknown',
+	rdate date default current_timestamp,
 	views int default 0,
 	official bit,
 	quality bit
@@ -72,10 +73,10 @@ insert into CategoryCountry(CountryId,CategoryId) values
 (1,1), (1,2), (1,3), (1,4), (1,5), (1,6), (1,7), (1,8)
 
 --Songs
-insert into Songs(name,singer,official,quality) values 
-(N'Trong Túi Áo Anh', N'Khởi My', 0, 0 ),
-(N'Em Thật Là Ngốc', N'Vũ Duy Khánh', 0 ,0 ),
-(N'Hơn Cả Trái Đất', N'Ánh Minh', 1, 1)
+insert into Songs(name,singer, rdate ,official,quality) values 
+(N'Trong Túi Áo Anh', N'Khởi My', '12/1/2013'  ,0, 0 ),
+(N'Em Thật Là Ngốc', N'Vũ Duy Khánh', '24/7/2021' , 0 ,0 ),
+(N'Hơn Cả Trái Đất', N'Ánh Minh', '19/2/2021',1, 1)
 
 --Users
 insert into Users(username,password) values 
@@ -87,31 +88,71 @@ insert into UserFavourite(songId,userId) values
 (2,1)
 
 -- create function
-
-
-
 -- create trigger
 
 
--- create stored procedure
--- 
+----------------------Create stored procedure--------------------------
+
+-- Select Countries 
 go
-create procedure fn_getCategoryByCountryId @countryId int
+create procedure sp_getCountries 
+as
+begin
+begin transaction
+set transaction isolation level read committed 
+	select * 
+	from Countries
+	commit transaction
+end
+----------EXEC
+go
+exec dbo.sp_getCountries
+
+-- Select Category By CountryId
+go
+create procedure sp_getCategoryByCountryId @countryId int
 as
 begin
 begin transaction
 set transaction isolation level repeatable read
-select * 
-from CategoryCountry cCountry
-join Categories c 
-on cCountry.CategoryId = c.Id
-where CountryId = @countryId
-commit transaction
+	select Id, name 
+	from CategoryCountry cCountry
+	join Categories c 
+	on cCountry.CategoryId = c.Id
+	where CountryId = @countryId
+	commit transaction
 end
- 
-exec dbo.fn_getCategoryByCountryId 1
-	
+----------EXEC
+go
+exec dbo.sp_getCategoryByCountryId 1
 
+
+-- Select Newest Songs 
+go
+create procedure fn_getNewestSongs
+as
+begin
+begin transaction
+set transaction isolation level read committed
+	select *
+	from Songs
+	where year(rdate) > year(CURRENT_TIMESTAMP)
+	commit transaction
+end
+
+-- Select Hoest Songs
+--go
+--create procedure fn_getHotestSongs
+--as
+--begin
+--begin transaction
+--set transaction isolation level read committed
+--	select top 50
+--	from Songs
+--	order by views
+	
+--	commit transaction
+--end
 
 -- Create
 
@@ -121,6 +162,6 @@ exec dbo.fn_getCategoryByCountryId 1
 
 
 
-
+-- Drop database
 use master 
 drop database MusicPlayer;
