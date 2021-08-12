@@ -12,10 +12,29 @@ namespace TestApp
 {
     public partial class Form1 : Form
     {
+        string[] country;
         public Form1()
         {
             InitializeComponent();
+            InitCountry();
+            SetCountry();
+        }
 
+        private void SetCountry()
+        {
+            for (int i = country.Length - 1; i >= 0 ; i--)
+            {
+                CountryItem addItem = new CountryItem(
+                    country[i], "id"
+                    );
+                addItem.Dock = DockStyle.Top;
+                panelCat.Controls.Add(addItem);
+            }
+        }
+
+        private void InitCountry()
+        {
+            country = new string[] { "Viet Nam", "Au My", "Chau A", "Khac"};
         }
     }
 }

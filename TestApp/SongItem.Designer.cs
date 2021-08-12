@@ -29,21 +29,25 @@ namespace TestApp
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelName = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.panelView = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelName.SuspendLayout();
+            this.panelView.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // panelName
             // 
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(427, 88);
-            this.panel1.TabIndex = 0;
+            this.panelName.Controls.Add(this.label2);
+            this.panelName.Controls.Add(this.label1);
+            this.panelName.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelName.Location = new System.Drawing.Point(0, 0);
+            this.panelName.Name = "panelName";
+            this.panelName.Size = new System.Drawing.Size(339, 85);
+            this.panelName.TabIndex = 0;
             // 
             // label1
             // 
@@ -67,24 +71,57 @@ namespace TestApp
             this.label2.TabIndex = 1;
             this.label2.Text = "Composer";
             // 
+            // panelView
+            // 
+            this.panelView.Controls.Add(this.label3);
+            this.panelView.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelView.Location = new System.Drawing.Point(591, 0);
+            this.panelView.Name = "panelView";
+            this.panelView.Size = new System.Drawing.Size(271, 85);
+            this.panelView.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(42, 32);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(43, 20);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "View";
+            // 
+            // panel1
+            // 
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(339, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(252, 85);
+            this.panel1.TabIndex = 2;
+            // 
             // SongItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelView);
+            this.Controls.Add(this.panelName);
             this.Name = "SongItem";
-            this.Size = new System.Drawing.Size(962, 88);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.Size = new System.Drawing.Size(862, 85);
+            this.panelName.ResumeLayout(false);
+            this.panelName.PerformLayout();
+            this.panelView.ResumeLayout(false);
+            this.panelView.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panelView;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel1;
     }
 }
