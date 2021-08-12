@@ -45,7 +45,7 @@ namespace TestApp
             this.panelName.Controls.Add(this.label1);
             this.panelName.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelName.Location = new System.Drawing.Point(0, 0);
-            this.panelName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelName.Margin = new System.Windows.Forms.Padding(4);
             this.panelName.Name = "panelName";
             this.panelName.Size = new System.Drawing.Size(452, 106);
             this.panelName.TabIndex = 0;
@@ -79,7 +79,7 @@ namespace TestApp
             this.panelView.Controls.Add(this.label3);
             this.panelView.Dock = System.Windows.Forms.DockStyle.Right;
             this.panelView.Location = new System.Drawing.Point(788, 0);
-            this.panelView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelView.Margin = new System.Windows.Forms.Padding(4);
             this.panelView.Name = "panelView";
             this.panelView.Size = new System.Drawing.Size(361, 106);
             this.panelView.TabIndex = 1;
@@ -98,7 +98,7 @@ namespace TestApp
             // 
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(452, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(336, 106);
             this.panel1.TabIndex = 2;
@@ -111,7 +111,7 @@ namespace TestApp
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelView);
             this.Controls.Add(this.panelName);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "SongItem";
             this.Size = new System.Drawing.Size(1149, 106);
             this.panelName.ResumeLayout(false);
