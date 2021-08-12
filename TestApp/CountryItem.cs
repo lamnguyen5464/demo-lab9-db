@@ -38,10 +38,11 @@ namespace TestApp
             return buttonCountry;
         }
 
-        public void AddCategories(string name)
+        public void AddCategories(string name, string id)
         {
             Button btn_add = new Button();
             btn_add.Text = name;
+            btn_add.Name = id;
             btn_add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
             btn_add.Dock = System.Windows.Forms.DockStyle.Top;
             btn_add.FlatAppearance.BorderSize = 0;
@@ -54,16 +55,23 @@ namespace TestApp
             btn_add.TabIndex = 3;
             btn_add.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             btn_add.UseVisualStyleBackColor = false;
-            //btn_add.Click += new EventHandler(this.button_Click);
+            btn_add.Click += new EventHandler(this.button_Click);
             panelCountry.Controls.Add(btn_add);
             
+        }
+
+        private void button_Click(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            //List<Song> songs = AppRepository.getIntance().getSong;
+            //SongItem.
         }
 
 
         public void setHeight(int height)
         {
             panelCountry.Size = new Size(
-                panelCountry.Width, 0
+                panelCountry.Width, height
                 );
         }
 
@@ -71,14 +79,14 @@ namespace TestApp
         {
             if (open == false)
             {
-                panelCountry.Height += num * 45;
+                this.Height += num * 45;
                 open = true;
                 panelCountry.Visible = true;
                 setHeight(num * 45);
             }
             else
             {
-                panelCountry.Height -= num * 45;
+                this.Height -= num * 45;
                 open = false;
                 panelCountry.Visible = false;
                 setHeight(0);
