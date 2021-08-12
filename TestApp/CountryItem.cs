@@ -17,10 +17,9 @@ namespace TestApp
         {
             InitializeComponent();
         }
-        public CountryItem(string name, string id)
+        public CountryItem(string name)
         {
             this.name = name;
-            this.id = id;
             InitializeComponent();
             buttonCountry.Text = name;
         }

@@ -14,7 +14,7 @@ namespace TestApp
 {
     public partial class Form1 : Form
     {
-        string[] country;
+        List<Country> countries;
         public Form1()
         {
             InitializeComponent();
@@ -24,19 +24,24 @@ namespace TestApp
 
         private void SetCountry()
         {
-            for (int i = country.Length - 1; i >= 0 ; i--)
+            if(countries != null)
             {
-                CountryItem addItem = new CountryItem(
-                    country[i], "id"
-                    );
-                addItem.Dock = DockStyle.Top;
-                panelCat.Controls.Add(addItem);
+                for (int i = countries.Count - 1; i >= 0; i--)
+                {
+                    CountryItem addItem = new CountryItem(
+                        countries[i].getName()
+                        );
+                    addItem.Dock = DockStyle.Top;
+                    panelCat.Controls.Add(addItem);
+                }
             }
+
         }
 
         private void InitCountry()
         {
-            country = new string[] { "Viet Nam", "Au My", "Chau A", "Khac"};
+
+            countries = AppRepository.getIntance().getListCountries();
         }
     }
 }
