@@ -38,7 +38,7 @@ namespace TestApp
                     List<Category> categories = AppRepository.getIntance().getCatOnId(countries[i].getId());
                     if(categories != null)
                     {
-                        for (int j = categories.Count - 1; j >= 0; j++)
+                        for (int j = categories.Count - 1; j >= 0; j--)
                         {
                             addItem.AddCategories(categories[j].getName());
                         }
@@ -58,7 +58,7 @@ namespace TestApp
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            AppRepository.getIntance().addNewCountry("Han Quoc 2");
         }
         private void country_click(object sender, System.EventArgs e)
         {

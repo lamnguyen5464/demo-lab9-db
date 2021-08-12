@@ -53,6 +53,12 @@ namespace TestApp.Repos
         }
 
 
+        public void addNewCountry(String name)
+        {
+            String sqlString = $"exec dbo.sp_addCountry N'{name}'";
+            DatabaseHelper.execute(sqlString);
+        }
+
 
 
         public void addModel(String name, String Id){
