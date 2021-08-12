@@ -32,17 +32,18 @@ namespace TestApp
                         countries[i].getName(),
                         countries[i].getId()
                         );
-                    addItem.GetButton().Click += new EventHandler(this.country_click);
+                    
                     addItem.Dock = DockStyle.Top;
-                    panelCat.Controls.Add(addItem);
                     List<Category> categories = AppRepository.getIntance().getCatOnId(countries[i].getId());
                     if(categories != null)
                     {
+                        addItem.num = categories.Count;
                         for (int j = categories.Count - 1; j >= 0; j++)
                         {
                             addItem.AddCategories(categories[j].getName());
                         }
                     }
+                    panelCat.Controls.Add(addItem);
                 }
             }
 
@@ -56,6 +57,7 @@ namespace TestApp
         {
             Button btn = sender as Button;
             string countryId = btn.Name;
+
         }
     }
 }

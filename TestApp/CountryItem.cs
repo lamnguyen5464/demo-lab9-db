@@ -14,6 +14,8 @@ namespace TestApp
     public partial class CountryItem : UserControl
     {
         private string name, id;
+        private bool open;
+        public int num;
         public CountryItem()
         {
             InitializeComponent();
@@ -25,6 +27,10 @@ namespace TestApp
             InitializeComponent();
             buttonCountry.Text = name;
             buttonCountry.Name = id;
+            panelCountry.Visible = false;
+            this.Height = buttonCountry.Height;
+            open = false;
+            num = 0;
         }
 
         public Button GetButton()
@@ -50,6 +56,34 @@ namespace TestApp
             btn_add.UseVisualStyleBackColor = false;
             //btn_add.Click += new EventHandler(this.button_Click);
             panelCountry.Controls.Add(btn_add);
+            
+        }
+
+
+        public void setHeight(int height)
+        {
+            panelCountry.Size = new Size(
+                panelCountry.Width, 0
+                );
+        }
+
+        private void buttonCountry_Click(object sender, EventArgs e)
+        {
+            if (open == false)
+            {
+                panelCountry.Height += num * 45;
+                open = true;
+                panelCountry.Visible = true;
+                setHeight(num * 45);
+            }
+            else
+            {
+                panelCountry.Height -= num * 45;
+                open = false;
+                panelCountry.Visible = false;
+                setHeight(0);
+            }
+            
         }
 
     }
