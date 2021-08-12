@@ -15,7 +15,6 @@ namespace TestApp.Models
         public int view;
         public int official;
         public String quality;
-
         public Song()
         {
 

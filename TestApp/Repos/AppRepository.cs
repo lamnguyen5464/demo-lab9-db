@@ -52,6 +52,16 @@ namespace TestApp.Repos
             return list;
         }
 
+        public List<Song> getSongsByCatId(String Id)
+        {
+            List<Song> list = new List<Song>();
+            Song song = new Song();
+            song.name = "Name 1";
+            song.id = "1";
+            list.Add(song);
+            return list;
+        }
+
 
         public void addNewCountry(String name)
         {
