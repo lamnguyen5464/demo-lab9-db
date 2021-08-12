@@ -26,16 +26,14 @@ namespace TestApp.Repos
 
         public List<Country> getListCountries(){
         	List<Country> listModels = new List<Country>();
-            //DataTable result = DatabaseHelper.query("SELECT * FROM Countries");
-            //foreach (DataRow row in result.Rows)
-            //{
-            //    String id = row["Id"].ToString();
-            //    String name = row["Name"].ToString();
-            //    Country model = new Country(id, name);
-            //    listModels.Add(model);
-            //}
-            listModels.Add(new Country("111", " Viet Nam"));
-            listModels.Add(new Country("123", " Au My"));
+            DataTable result = DatabaseHelper.query("exec dbo.sp_getCountries");
+            foreach (DataRow row in result.Rows)
+            {
+                String id = row["Id"].ToString();
+                String name = row["Name"].ToString();
+                Country model = new Country(id, name);
+                listModels.Add(model);
+            }
             return listModels;
         }
 
@@ -51,9 +49,11 @@ namespace TestApp.Repos
                 Category model = new Category(id, name);
                 list.Add(model);
             }
-
             return list;
         }
+
+
+
 
         public void addModel(String name, String Id){
         	String sqlCommand = $"INSERT INTO Model Values({Id}, {name}";
