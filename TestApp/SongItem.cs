@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace TestApp
 {
-    public partial class Form1 : Form
+    public partial class SongItem : UserControl
     {
-        public Form1()
+        public SongItem()
         {
             InitializeComponent();
-
         }
     }
 }
