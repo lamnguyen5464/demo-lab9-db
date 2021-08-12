@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TestApp.Models;
+using TestApp.Repos;
 
 namespace TestApp
 {
@@ -61,8 +62,12 @@ namespace TestApp
         private void button_Click(object sender, EventArgs e)
         {
             Button btn = sender as Button;
-            //List<Song> songs = AppRepository.getIntance().getSong;
-            //SongItem.
+            string id = btn.Name;
+            List<Song> songs = AppRepository.getIntance().getSongsByCatId(id);
+            for (int j = songs.Count - 1; j >= 0; j--)
+            {
+                MessageBox.Show(songs[j].name);
+            }
         }
 
 
