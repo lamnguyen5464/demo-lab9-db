@@ -55,10 +55,22 @@ namespace TestApp.Repos
         public List<Song> getSongsByCatId(String Id)
         {
             List<Song> list = new List<Song>();
-            Song song = new Song();
-            song.name = "Name 1";
-            song.id = "1";
-            list.Add(song);
+            //Song song = new Song();
+            //song.name = "Name 1";
+            //song.id = "1";
+            //list.Add(song);
+
+            String sqlString = $"exec dbo.sp_getSongsByCategoryId {Id}";
+            DataTable result = DatabaseHelper.query(sqlString);
+            foreach (DataRow row in result.Rows)
+            {
+                Song model = new Song();
+                model.id = row["Id"].ToString();
+                model.name = row["name"].ToString();
+                model.singer = row["singer"].ToString();
+                list.Add(model);
+            }
+
             return list;
         }
 
