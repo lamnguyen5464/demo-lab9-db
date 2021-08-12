@@ -14,17 +14,34 @@ namespace TestApp
 {
     public partial class Form1 : Form
     {
+        List<Country> countries;
         public Form1()
         {
             InitializeComponent();
+            InitCountry();
+            SetCountry();
+        }
+
+        private void SetCountry()
+        {
+            if(countries != null)
+            {
+                for (int i = countries.Count - 1; i >= 0; i--)
+                {
+                    CountryItem addItem = new CountryItem(
+                        countries[i].getName()
+                        );
+                    addItem.Dock = DockStyle.Top;
+                    panelCat.Controls.Add(addItem);
+                }
+            }
 
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void InitCountry()
         {
-            List<Country> list =  AppRepository.getIntance().getListCountries();
-            MessageBox.Show(list[0].getName());
 
+            countries = AppRepository.getIntance().getListCountries();
         }
     }
 }
