@@ -24,14 +24,14 @@ namespace TestApp.Repos
             return AppRepository.instance;
         }
 
-        public List<Category> getListCategories(){
-        	DataTable result = DatabaseHelper.query("SELECT * FROM Category");
-        	List<Category> listModels = new List<Category>();
+        public List<Country> getListCountries(){
+        	DataTable result = DatabaseHelper.query("SELECT * FROM Countries");
+        	List<Country> listModels = new List<Country>();
         	foreach (DataRow row in result.Rows)
             {
-        		Category model = new Category();
-                model.setId(row["Id"].ToString());
-                model.setName(row["Name"].ToString());
+                String id = row["Id"].ToString();
+                String name = row["Name"].ToString();
+        		Country model = new Country(id, name);
         		listModels.Add(model);
             }
         	return listModels;
