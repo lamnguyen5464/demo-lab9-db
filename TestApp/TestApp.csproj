@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=5.15.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\FontAwesome.Sharp.5.15.3\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,6 +49,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ButtonZ.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="CountryItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -62,6 +68,7 @@
     <Compile Include="Helpers\DatabaseHelper.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Country.cs" />
+    <Compile Include="Models\mainLayoutAdapter.cs" />
     <Compile Include="Models\Song.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -71,6 +78,12 @@
     </Compile>
     <Compile Include="SongItem.Designer.cs">
       <DependentUpon>SongItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="testItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="testItem.Designer.cs">
+      <DependentUpon>testItem.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="CountryItem.resx">
       <DependentUpon>CountryItem.cs</DependentUpon>
@@ -86,10 +99,15 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="SongItem.resx">
       <DependentUpon>SongItem.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="testItem.resx">
+      <DependentUpon>testItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -103,6 +121,17 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="UI\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\angle-double-left-solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x-mark-24.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

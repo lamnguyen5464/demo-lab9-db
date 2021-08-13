@@ -14,6 +14,12 @@ namespace TestApp
     public partial class SongItem : UserControl
     {
         string idString, nameString, singerString, composerString, qualityString, viewString;
+
+        private void singer_Click(object sender, EventArgs e)
+        {
+
+        }
+
         int officalInt;
         public SongItem(string id, string name, string singer, string composer,
                     int official, string quality, string view)
@@ -30,7 +36,7 @@ namespace TestApp
             songName.Text = name;
             composerName.Text = composer;
             this.singer.Text = singer;
-            this.sq.Text = quality;
+            //this.sq.Text = quality;
             this.view.Text = view;
 
         }

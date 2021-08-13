@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TestApp.Repos;
 using TestApp.Models;
+using FontAwesome.Sharp;
 
 namespace TestApp
 {
@@ -18,8 +19,17 @@ namespace TestApp
         public Form1()
         {
             InitializeComponent();
+            SetMainLayout();
             InitCountry();
             SetCountry();
+
+        }
+
+        private void SetMainLayout()
+        {
+            extendPanel.Visible = false;
+            NameCat.Text = "";
+            mainLayoutAdapter.setInstance(mainLayout, extendPanel, panelCatExtend, NameCat);
         }
 
         private void SetCountry()
@@ -37,11 +47,27 @@ namespace TestApp
                     List<Category> categories = AppRepository.getIntance().getCatOnId(countries[i].getId());
                     if(categories != null)
                     {
-                        addItem.num = categories.Count;
-                        for (int j = categories.Count - 1; j >= 0; j--)
-                        {
-                            addItem.AddCategories(categories[j].getName(), categories[j].getId());
+                        if(categories.Count <= 4) {
+                            addItem.num = categories.Count;
+                            for (int j = categories.Count - 1; j >= 0; j--)
+                            {
+                                addItem.AddCategories(categories[j].getName(), categories[j].getId());
+                            }
                         }
+                        else
+                        {
+                            addItem.AddMoreButton();
+                            addItem.num = 4;
+                            for (int j = 2; j >= 0; j--)
+                            {
+                                addItem.AddCategories(categories[j].getName(), categories[j].getId());
+                            }
+                            for(int j = categories.Count - 1; j >= 3; j--)
+                            {
+                                addItem.AddCategoriesToExtend(categories[j].getName(), categories[j].getId());
+                            }
+                        }
+
                     }
                     panelCat.Controls.Add(addItem);
                 }
@@ -62,9 +88,13 @@ namespace TestApp
         }
         private void country_click(object sender, System.EventArgs e)
         {
-            Button btn = sender as Button;
+            IconButton btn = sender as IconButton;
             string countryId = btn.Name;
 
+        }
+        private void iconPictureBox1_Click(object sender, EventArgs e)
+        {
+            extendPanel.Visible = false;
         }
     }
 }
