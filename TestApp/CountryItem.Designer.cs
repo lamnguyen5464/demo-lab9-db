@@ -49,7 +49,7 @@ namespace TestApp
             this.buttonCountry.Dock = System.Windows.Forms.DockStyle.Top;
             this.buttonCountry.FlatAppearance.BorderSize = 0;
             this.buttonCountry.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCountry.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonCountry.ForeColor = System.Drawing.SystemColors.Desktop;
             this.buttonCountry.IconChar = FontAwesome.Sharp.IconChar.Forward;
             this.buttonCountry.IconColor = System.Drawing.Color.Crimson;
             this.buttonCountry.IconFont = FontAwesome.Sharp.IconFont.Auto;

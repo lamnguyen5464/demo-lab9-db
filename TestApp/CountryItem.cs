@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TestApp.Configs;
 using TestApp.Models;
 using TestApp.Repos;
 
@@ -34,6 +35,8 @@ namespace TestApp
             buttonCountry.Text = name;
             buttonCountry.Name = id;
             panelCountry.Visible = false;
+            buttonCountry.BackColor = ColorPrimary.primaryDark;
+            panelCountry.BackColor = ColorPrimary.primary;
             this.Height = buttonCountry.Height;
             open = false;
             num = 0;
@@ -69,7 +72,7 @@ namespace TestApp
         {
             Button btn_add = new Button();
             btn_add.Text = "Xem Them";
-            btn_add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(170)))));
+            btn_add.BackColor = ColorPrimary.primary;
             btn_add.Dock = System.Windows.Forms.DockStyle.Top;
             btn_add.FlatAppearance.BorderSize = 0;
             btn_add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

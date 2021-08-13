@@ -9,11 +9,11 @@ namespace TestApp.Models
 {
     class mainLayoutAdapter
     {
-        public FlowLayoutPanel mainLayout;
+        public Panel mainLayout;
         public Panel extendPanel;
         public Panel PanelCatExtend;
         public Label NameCat;
-        private mainLayoutAdapter(FlowLayoutPanel panel, Panel panel1, Panel panelCatExtend,Label nameCat)
+        private mainLayoutAdapter(Panel panel, Panel panel1, Panel panelCatExtend,Label nameCat)
         {
             mainLayout = panel;
             extendPanel = panel1;
@@ -25,7 +25,7 @@ namespace TestApp.Models
         {
             return instance;
         }
-        static public void setInstance(FlowLayoutPanel panel, Panel panel1, Panel panelCatExtend, Label nameCat)
+        static public void setInstance(Panel panel, Panel panel1, Panel panelCatExtend, Label nameCat)
         {
             instance = new mainLayoutAdapter(panel, panel1, panelCatExtend, nameCat);
         }

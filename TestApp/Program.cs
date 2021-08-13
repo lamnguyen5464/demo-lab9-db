@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TestApp.Helpers;
 
 namespace TestApp
 {
@@ -16,7 +17,11 @@ namespace TestApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Form form = new Form();
+            Navigation.getInstance().Init(form);
+            Navigation.getInstance().push(new LoginScreen());
+            Application.Run(Navigation.getInstance().form);
+
         }
     }
 }
