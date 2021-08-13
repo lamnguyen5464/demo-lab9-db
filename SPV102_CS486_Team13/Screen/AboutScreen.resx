@@ -117,4 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Super–Vocal (Chinese: 声入人心; pinyin: Shēng rù rénxīn) is a Chinese reality television created and produced by Hunan TV and iQiyi. It is a singing competition focused on classically trained singers, singing both operatic and musical pieces.</value>
+  </data>
 </root>
