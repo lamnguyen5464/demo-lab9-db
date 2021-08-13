@@ -1,0 +1,15 @@
+C:\Users\THINKPAD\Desktop\university\Semester 6\Database\Winform\demo-lab9-db\TestApp\bin\Debug\TestApp.exe.config
+C:\Users\THINKPAD\Desktop\university\Semester 6\Database\Winform\demo-lab9-db\TestApp\bin\Debug\TestApp.exe
+C:\Users\THINKPAD\Desktop\university\Semester 6\Database\Winform\demo-lab9-db\TestApp\bin\Debug\TestApp.pdb
+C:\Users\THINKPAD\Desktop\university\Semester 6\Database\Winform\demo-lab9-db\TestApp\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\THINKPAD\Desktop\university\Semester 6\Database\Winform\demo-lab9-db\TestApp\obj\Debug\TestApp.csprojAssemblyReference.cache
+C:\Users\THINKPAD\Desktop\university\Semester 6\Database\Winform\demo-lab9-db\TestApp\obj\Debug\TestApp.CountryItem.resources
+C:\Users\THINKPAD\Desktop\university\Semester 6\Database\Winform\demo-lab9-db\TestApp\obj\Debug\TestApp.Form1.resources
+C:\Users\THINKPAD\Desktop\university\Semester 6\Database\Winform\demo-lab9-db\TestApp\obj\Debug\TestApp.Properties.Resources.resources
+C:\Users\THINKPAD\Desktop\university\Semester 6\Database\Winform\demo-lab9-db\TestApp\obj\Debug\TestApp.SongItem.resources
+C:\Users\THINKPAD\Desktop\university\Semester 6\Database\Winform\demo-lab9-db\TestApp\obj\Debug\TestApp.testItem.resources
+C:\Users\THINKPAD\Desktop\university\Semester 6\Database\Winform\demo-lab9-db\TestApp\obj\Debug\TestApp.csproj.GenerateResource.cache
+C:\Users\THINKPAD\Desktop\university\Semester 6\Database\Winform\demo-lab9-db\TestApp\obj\Debug\TestApp.csproj.CoreCompileInputs.cache
+C:\Users\THINKPAD\Desktop\university\Semester 6\Database\Winform\demo-lab9-db\TestApp\obj\Debug\TestApp.csproj.CopyComplete
+C:\Users\THINKPAD\Desktop\university\Semester 6\Database\Winform\demo-lab9-db\TestApp\obj\Debug\TestApp.exe
+C:\Users\THINKPAD\Desktop\university\Semester 6\Database\Winform\demo-lab9-db\TestApp\obj\Debug\TestApp.pdb
