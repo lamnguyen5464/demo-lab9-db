@@ -50,7 +50,7 @@ namespace SPV102_CS486_Team13.Screen
             this.panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelLeft.Location = new System.Drawing.Point(0, 0);
             this.panelLeft.Name = "panelLeft";
-            this.panelLeft.Size = new System.Drawing.Size(179, 502);
+            this.panelLeft.Size = new System.Drawing.Size(179, 1000);
             this.panelLeft.TabIndex = 0;
             // 
             // buttonAbout
@@ -146,16 +146,16 @@ namespace SPV102_CS486_Team13.Screen
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop.Location = new System.Drawing.Point(179, 0);
             this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(706, 40);
+            this.panelTop.Size = new System.Drawing.Size(1021, 40);
             this.panelTop.TabIndex = 1;
             // 
             // panelMain
             // 
-            this.panelMain.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMain.Location = new System.Drawing.Point(179, 40);
             this.panelMain.Margin = new System.Windows.Forms.Padding(2);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(617, 462);
+            this.panelMain.Size = new System.Drawing.Size(1021, 960);
             this.panelMain.TabIndex = 2;
             // 
             // MainScreen
@@ -167,7 +167,7 @@ namespace SPV102_CS486_Team13.Screen
             this.Controls.Add(this.panelLeft);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "MainScreen";
-            this.Size = new System.Drawing.Size(885, 502);
+            this.Size = new System.Drawing.Size(1200, 1000);
             this.panelLeft.ResumeLayout(false);
             this.ResumeLayout(false);
 

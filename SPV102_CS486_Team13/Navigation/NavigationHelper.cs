@@ -26,7 +26,7 @@ namespace SPV102_CS486_Team13.Navigation
         }
         public void Init(Form form)
         {
-            form.Size = new Size(885, 502);
+            form.Size = new Size(1200, 1000);
             this.form = form;
         }
 

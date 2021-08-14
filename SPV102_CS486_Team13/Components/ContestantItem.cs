@@ -16,6 +16,7 @@ namespace SPV102_CS486_Team13.Components
         public ContestantItem(string name, string bd, string university, string moreInfo)
         {
             InitializeComponent();
+            this.Size = new Size(900, 58);
             this.nameString = name;
 
             buttonName.Text = name;
