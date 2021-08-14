@@ -14,7 +14,7 @@ namespace SPV102_CS486_Team13.Repos
     class AppRepo
     {
         private static AppRepo instance = null;
-        private static Boolean isDev = false;
+        private static Boolean isDev = true;
         private AppRepo() { }
 
         public static AppRepo getInstnace()
@@ -74,7 +74,7 @@ namespace SPV102_CS486_Team13.Repos
         {
             if (isDev)
             {
-                return 
+                return Contestant.getMockdata();
             }
             List<Contestant> list = new List<Contestant>();
             String sqlString = $"SELECT * FROM";
@@ -95,7 +95,8 @@ namespace SPV102_CS486_Team13.Repos
         {
             if (isDev)
             {
-                Round.getMockdata();
+                return Round.getMockdata();
+                
             }
 
             List<Round> list = new List<Round>();
@@ -107,6 +108,7 @@ namespace SPV102_CS486_Team13.Repos
             }
             return list;
         }
+
 
 
     }
