@@ -9,3 +9,5 @@ D:\DATABASE\FinalR\demo-lab9-db\SPV102_CS486_Team13\obj\Debug\SPV102_CS486_Team1
 D:\DATABASE\FinalR\demo-lab9-db\SPV102_CS486_Team13\obj\Debug\SPV102_CS486_Team13.exe
 D:\DATABASE\FinalR\demo-lab9-db\SPV102_CS486_Team13\obj\Debug\SPV102_CS486_Team13.pdb
 D:\DATABASE\FinalR\demo-lab9-db\SPV102_CS486_Team13\obj\Debug\SPV102_CS486_Team13.Screen.AboutScreen.resources
+D:\DATABASE\FinalR\demo-lab9-db\SPV102_CS486_Team13\bin\Debug\FontAwesome.Sharp.dll
+D:\DATABASE\FinalR\demo-lab9-db\SPV102_CS486_Team13\obj\Debug\SPV102_CS486_Team13.csproj.CopyComplete

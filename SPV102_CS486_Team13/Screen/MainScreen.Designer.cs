@@ -30,20 +30,33 @@ namespace SPV102_CS486_Team13.Screen
         private void InitializeComponent()
         {
             this.panelLeft = new System.Windows.Forms.Panel();
+            this.buttonAbout = new System.Windows.Forms.Button();
             this.panelTop = new System.Windows.Forms.Panel();
             this.panelMain = new System.Windows.Forms.Panel();
-            this.buttonAbout = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panelLeft.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelLeft
             // 
+            this.panelLeft.Controls.Add(this.button1);
             this.panelLeft.Controls.Add(this.buttonAbout);
             this.panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelLeft.Location = new System.Drawing.Point(0, 0);
             this.panelLeft.Name = "panelLeft";
             this.panelLeft.Size = new System.Drawing.Size(179, 502);
             this.panelLeft.TabIndex = 0;
+            // 
+            // buttonAbout
+            // 
+            this.buttonAbout.Location = new System.Drawing.Point(2, 301);
+            this.buttonAbout.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonAbout.Name = "buttonAbout";
+            this.buttonAbout.Size = new System.Drawing.Size(179, 34);
+            this.buttonAbout.TabIndex = 0;
+            this.buttonAbout.Text = "About";
+            this.buttonAbout.UseVisualStyleBackColor = true;
+            this.buttonAbout.Click += new System.EventHandler(this.button1_Click);
             // 
             // panelTop
             // 
@@ -57,22 +70,24 @@ namespace SPV102_CS486_Team13.Screen
             // 
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMain.Location = new System.Drawing.Point(179, 40);
-            this.panelMain.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelMain.Margin = new System.Windows.Forms.Padding(2);
             this.panelMain.Name = "panelMain";
             this.panelMain.Size = new System.Drawing.Size(617, 462);
             this.panelMain.TabIndex = 2;
             // 
-            // buttonAbout
+            // button1
             // 
-            this.buttonAbout.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonAbout.Location = new System.Drawing.Point(0, 0);
-            this.buttonAbout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.buttonAbout.Name = "buttonAbout";
-            this.buttonAbout.Size = new System.Drawing.Size(179, 34);
-            this.buttonAbout.TabIndex = 0;
-            this.buttonAbout.Text = "About";
-            this.buttonAbout.UseVisualStyleBackColor = true;
-            this.buttonAbout.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(179, 47);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Contestants";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // MainScreen
             // 
@@ -95,5 +110,6 @@ namespace SPV102_CS486_Team13.Screen
         private System.Windows.Forms.Panel panelTop;
         private System.Windows.Forms.Panel panelMain;
         private System.Windows.Forms.Button buttonAbout;
+        private System.Windows.Forms.Button button1;
     }
 }
