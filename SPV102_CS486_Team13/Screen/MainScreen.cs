@@ -44,13 +44,31 @@ namespace SPV102_CS486_Team13.Screen
                 btn_add.Location = new System.Drawing.Point(0, 228);
                 btn_add.Size = new System.Drawing.Size(179, 40);
                 btn_add.TabIndex = 7;
-                
+                btn_add.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
                 btn_add.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
                 btn_add.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
                 btn_add.UseVisualStyleBackColor = true;
+                btn_add.Click += new EventHandler(this.btn_click);
                 panelRound.Controls.Add(btn_add);
             }
             panelRound.Size = new Size(panelRound.Width, 40 * rounds.Count);
+        }
+
+        private void btn_click(object sender, EventArgs e)
+        {
+            List<Contestant> contestants = AppRepo.getInstnace().getAllContestant();
+            foreach (Control item in panelMain.Controls.OfType<Control>().ToList())
+            {
+                panelMain.Controls.Remove(item);
+            }
+            for (int i = contestants.Count - 1; i >= 0; i--)
+            {
+                ContestantItem add = new ContestantItem(
+                    "", "", "", ""
+                    );
+                add.Dock = DockStyle.Top;
+                panelMain.Controls.Add(add);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
