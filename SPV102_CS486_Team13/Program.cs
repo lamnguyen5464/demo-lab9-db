@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SPV102_CS486_Team13.Navigation;
+using SPV102_CS486_Team13.Screen;
 
 namespace SPV102_CS486_Team13
 {
@@ -16,7 +18,10 @@ namespace SPV102_CS486_Team13
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Form form = new Form();
+            NavigationHelper.getInstance().Init(form);
+            NavigationHelper.getInstance().push(new MainScreen());
+            Application.Run(NavigationHelper.getInstance().form);
         }
     }
 }
