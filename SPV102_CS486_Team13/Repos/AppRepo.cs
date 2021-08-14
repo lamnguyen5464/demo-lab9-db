@@ -63,7 +63,8 @@ namespace SPV102_CS486_Team13.Repos
         {
             if (isDev)
             {
-                Round.getMockdata();
+                return Round.getMockdata();
+                
             }
 
             List<Round> list = new List<Round>();
@@ -75,6 +76,7 @@ namespace SPV102_CS486_Team13.Repos
             }
             return list;
         }
+
 
 
     }
