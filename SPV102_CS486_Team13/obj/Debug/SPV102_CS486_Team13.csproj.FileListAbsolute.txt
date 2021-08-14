@@ -1,13 +1,14 @@
 D:\DATABASE\FinalR\demo-lab9-db\SPV102_CS486_Team13\bin\Debug\SPV102_CS486_Team13.exe.config
 D:\DATABASE\FinalR\demo-lab9-db\SPV102_CS486_Team13\bin\Debug\SPV102_CS486_Team13.exe
 D:\DATABASE\FinalR\demo-lab9-db\SPV102_CS486_Team13\bin\Debug\SPV102_CS486_Team13.pdb
+D:\DATABASE\FinalR\demo-lab9-db\SPV102_CS486_Team13\bin\Debug\FontAwesome.Sharp.dll
 D:\DATABASE\FinalR\demo-lab9-db\SPV102_CS486_Team13\obj\Debug\SPV102_CS486_Team13.csproj.AssemblyReference.cache
+D:\DATABASE\FinalR\demo-lab9-db\SPV102_CS486_Team13\obj\Debug\SPV102_CS486_Team13.Form1.resources
 D:\DATABASE\FinalR\demo-lab9-db\SPV102_CS486_Team13\obj\Debug\SPV102_CS486_Team13.Properties.Resources.resources
+D:\DATABASE\FinalR\demo-lab9-db\SPV102_CS486_Team13\obj\Debug\SPV102_CS486_Team13.Screen.AboutScreen.resources
 D:\DATABASE\FinalR\demo-lab9-db\SPV102_CS486_Team13\obj\Debug\SPV102_CS486_Team13.Screen.MainScreen.resources
 D:\DATABASE\FinalR\demo-lab9-db\SPV102_CS486_Team13\obj\Debug\SPV102_CS486_Team13.csproj.GenerateResource.cache
 D:\DATABASE\FinalR\demo-lab9-db\SPV102_CS486_Team13\obj\Debug\SPV102_CS486_Team13.csproj.CoreCompileInputs.cache
+D:\DATABASE\FinalR\demo-lab9-db\SPV102_CS486_Team13\obj\Debug\SPV102_CS486_Team13.csproj.CopyComplete
 D:\DATABASE\FinalR\demo-lab9-db\SPV102_CS486_Team13\obj\Debug\SPV102_CS486_Team13.exe
 D:\DATABASE\FinalR\demo-lab9-db\SPV102_CS486_Team13\obj\Debug\SPV102_CS486_Team13.pdb
-D:\DATABASE\FinalR\demo-lab9-db\SPV102_CS486_Team13\obj\Debug\SPV102_CS486_Team13.Screen.AboutScreen.resources
-D:\DATABASE\FinalR\demo-lab9-db\SPV102_CS486_Team13\bin\Debug\FontAwesome.Sharp.dll
-D:\DATABASE\FinalR\demo-lab9-db\SPV102_CS486_Team13\obj\Debug\SPV102_CS486_Team13.csproj.CopyComplete

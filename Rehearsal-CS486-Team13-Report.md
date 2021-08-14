@@ -14,13 +14,13 @@
 #### Workload
 ```
 Database design & implement:
-    Nguyen_Thanh_Dat        :16.5%    :Signed
-    Nguyen_Truong_Lam       :16.5%    :Signed
+    Nguyen_Thanh_Dat        :17%    :Signed
     Phan_Ho_Nguyen_Bao      :16.5%    :Signed
     Truong_Hoang_Chuong     :16.5%    :Signed
 App dev:
+    Nguyen_Truong_Lam       :17%    :Signed
     Mai_Quoc_Khanh          :17%    :Signed
-    Tran_Hai_Anh_Dien       :17%    :Signed
+    Tran_Hai_Anh_Dien       :16.5%    :Signed
 ```
 
 #### Guilde to implement
