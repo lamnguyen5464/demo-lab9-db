@@ -7,3 +7,4 @@ C:\Users\lamng\Documents\Demo\demo-lab9-db\SPV102_CS486_Team13\obj\Debug\SPV102_
 C:\Users\lamng\Documents\Demo\demo-lab9-db\SPV102_CS486_Team13\obj\Debug\SPV102_CS486_Team13.csproj.CoreCompileInputs.cache
 C:\Users\lamng\Documents\Demo\demo-lab9-db\SPV102_CS486_Team13\obj\Debug\SPV102_CS486_Team13.exe
 C:\Users\lamng\Documents\Demo\demo-lab9-db\SPV102_CS486_Team13\obj\Debug\SPV102_CS486_Team13.pdb
+C:\Users\lamng\Documents\Demo\demo-lab9-db\SPV102_CS486_Team13\obj\Debug\SPV102_CS486_Team13.Form1.resources

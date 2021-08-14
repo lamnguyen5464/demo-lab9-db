@@ -4,7 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SPV102_CS486_Team13.Helpers;
+using SPV102_CS486_Team13.Models;
 using System.Data;
+using SPV102_CS486_Team13.Models;
 
 namespace SPV102_CS486_Team13.Repos
 {
@@ -23,14 +25,14 @@ namespace SPV102_CS486_Team13.Repos
             return AppRepo.instance;
         }
 
-        public List<string> getAllContestant()
+        public List<Contestant> getAllContestant()
         {
             if (isDev)
             {
-
+                return Contestant.getMockdata();
             }
 
-            List<String> list = new List<string>();
+            List<Contestant> list = new List<Contestant>();
             String sqlString = $"SELECT * FROM";
             DataTable result = DatabaseHelper.query(sqlString);
             foreach(DataRow row in result.Rows)
@@ -40,14 +42,14 @@ namespace SPV102_CS486_Team13.Repos
             return list;
         }
 
-        public List<string> getAllExaminers()
+        public List<Examiner> getAllExaminers()
         {
             if (isDev)
             {
-
+                return Examiner.getMockdata();
             }
 
-            List<String> list = new List<string>();
+            List<Examiner> list = new List<Examiner>();
             String sqlString = $"SELECT * FROM";
             DataTable result = DatabaseHelper.query(sqlString);
             foreach(DataRow row in result.Rows)
@@ -57,14 +59,14 @@ namespace SPV102_CS486_Team13.Repos
             return list;
         }
 
-        public List<string> getAllRounds()
+        public List<Round> getAllRounds()
         {
             if (isDev)
             {
-
+                Round.getMockdata();
             }
 
-            List<String> list = new List<string>();
+            List<Round> list = new List<Round>();
             String sqlString = $"SELECT * FROM";
             DataTable result = DatabaseHelper.query(sqlString);
             foreach(DataRow row in result.Rows)
