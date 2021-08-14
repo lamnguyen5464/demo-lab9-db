@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using TestApp.Helpers;
 
-namespace TestApp
+namespace SPV102_CS486_Team13
 {
     static class Program
     {
@@ -17,11 +16,7 @@ namespace TestApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Form form = new Form();
-            Navigation.getInstance().Init(form);
-            Navigation.getInstance().push(new LoginScreen());
-            Application.Run(Navigation.getInstance().form);
-
+            Application.Run(new Form1());
         }
     }
 }

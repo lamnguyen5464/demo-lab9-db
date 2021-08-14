@@ -1,0 +1,9 @@
+C:\Users\lamng\Documents\Demo\demo-lab9-db\SPV102_CS486_Team13\bin\Debug\SPV102_CS486_Team13.exe.config
+C:\Users\lamng\Documents\Demo\demo-lab9-db\SPV102_CS486_Team13\bin\Debug\SPV102_CS486_Team13.exe
+C:\Users\lamng\Documents\Demo\demo-lab9-db\SPV102_CS486_Team13\bin\Debug\SPV102_CS486_Team13.pdb
+C:\Users\lamng\Documents\Demo\demo-lab9-db\SPV102_CS486_Team13\obj\Debug\SPV102_CS486_Team13.csproj.AssemblyReference.cache
+C:\Users\lamng\Documents\Demo\demo-lab9-db\SPV102_CS486_Team13\obj\Debug\SPV102_CS486_Team13.Properties.Resources.resources
+C:\Users\lamng\Documents\Demo\demo-lab9-db\SPV102_CS486_Team13\obj\Debug\SPV102_CS486_Team13.csproj.GenerateResource.cache
+C:\Users\lamng\Documents\Demo\demo-lab9-db\SPV102_CS486_Team13\obj\Debug\SPV102_CS486_Team13.csproj.CoreCompileInputs.cache
+C:\Users\lamng\Documents\Demo\demo-lab9-db\SPV102_CS486_Team13\obj\Debug\SPV102_CS486_Team13.exe
+C:\Users\lamng\Documents\Demo\demo-lab9-db\SPV102_CS486_Team13\obj\Debug\SPV102_CS486_Team13.pdb

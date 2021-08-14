@@ -32,9 +32,9 @@ namespace TestApp
             this.view = new System.Windows.Forms.Label();
             this.panelView = new System.Windows.Forms.Panel();
             this.panelName = new System.Windows.Forms.Panel();
+            this.singer = new System.Windows.Forms.Label();
             this.composerName = new System.Windows.Forms.Label();
             this.songName = new System.Windows.Forms.Label();
-            this.singer = new System.Windows.Forms.Label();
             this.panelView.SuspendLayout();
             this.panelName.SuspendLayout();
             this.SuspendLayout();
@@ -68,6 +68,16 @@ namespace TestApp
             this.panelName.Size = new System.Drawing.Size(335, 94);
             this.panelName.TabIndex = 0;
             // 
+            // singer
+            // 
+            this.singer.AutoSize = true;
+            this.singer.Location = new System.Drawing.Point(153, 45);
+            this.singer.Name = "singer";
+            this.singer.Size = new System.Drawing.Size(97, 20);
+            this.singer.TabIndex = 2;
+            this.singer.Text = "SingerName";
+            this.singer.Click += new System.EventHandler(this.singer_Click);
+            // 
             // composerName
             // 
             this.composerName.AutoSize = true;
@@ -89,16 +99,6 @@ namespace TestApp
             this.songName.Size = new System.Drawing.Size(113, 45);
             this.songName.TabIndex = 0;
             this.songName.Text = "Song Name";
-            // 
-            // singer
-            // 
-            this.singer.AutoSize = true;
-            this.singer.Location = new System.Drawing.Point(153, 45);
-            this.singer.Name = "singer";
-            this.singer.Size = new System.Drawing.Size(97, 20);
-            this.singer.TabIndex = 2;
-            this.singer.Text = "SingerName";
-            this.singer.Click += new System.EventHandler(this.singer_Click);
             // 
             // SongItem
             // 
