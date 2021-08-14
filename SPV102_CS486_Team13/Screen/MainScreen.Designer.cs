@@ -30,33 +30,28 @@ namespace SPV102_CS486_Team13.Screen
         private void InitializeComponent()
         {
             this.panelLeft = new System.Windows.Forms.Panel();
-            this.buttonAbout = new System.Windows.Forms.Button();
             this.panelTop = new System.Windows.Forms.Panel();
             this.panelMain = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.panelRound = new System.Windows.Forms.Panel();
+            this.buttonContestant = new FontAwesome.Sharp.IconButton();
+            this.buttonExaminers = new FontAwesome.Sharp.IconButton();
+            this.buttonRounds = new FontAwesome.Sharp.IconButton();
+            this.buttonAbout = new FontAwesome.Sharp.IconButton();
             this.panelLeft.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelLeft
             // 
-            this.panelLeft.Controls.Add(this.button1);
             this.panelLeft.Controls.Add(this.buttonAbout);
+            this.panelLeft.Controls.Add(this.panelRound);
+            this.panelLeft.Controls.Add(this.buttonRounds);
+            this.panelLeft.Controls.Add(this.buttonExaminers);
+            this.panelLeft.Controls.Add(this.buttonContestant);
             this.panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelLeft.Location = new System.Drawing.Point(0, 0);
             this.panelLeft.Name = "panelLeft";
             this.panelLeft.Size = new System.Drawing.Size(179, 502);
             this.panelLeft.TabIndex = 0;
-            // 
-            // buttonAbout
-            // 
-            this.buttonAbout.Location = new System.Drawing.Point(2, 301);
-            this.buttonAbout.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonAbout.Name = "buttonAbout";
-            this.buttonAbout.Size = new System.Drawing.Size(179, 34);
-            this.buttonAbout.TabIndex = 0;
-            this.buttonAbout.Text = "About";
-            this.buttonAbout.UseVisualStyleBackColor = true;
-            this.buttonAbout.Click += new System.EventHandler(this.button1_Click);
             // 
             // panelTop
             // 
@@ -75,19 +70,89 @@ namespace SPV102_CS486_Team13.Screen
             this.panelMain.Size = new System.Drawing.Size(617, 462);
             this.panelMain.TabIndex = 2;
             // 
-            // button1
+            // panelRound
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(179, 47);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Contestants";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = true;
+            this.panelRound.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelRound.Location = new System.Drawing.Point(0, 120);
+            this.panelRound.Name = "panelRound";
+            this.panelRound.Size = new System.Drawing.Size(179, 108);
+            this.panelRound.TabIndex = 3;
+            // 
+            // buttonContestant
+            // 
+            this.buttonContestant.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonContestant.FlatAppearance.BorderSize = 0;
+            this.buttonContestant.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonContestant.IconChar = FontAwesome.Sharp.IconChar.React;
+            this.buttonContestant.IconColor = System.Drawing.Color.Black;
+            this.buttonContestant.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.buttonContestant.IconSize = 20;
+            this.buttonContestant.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonContestant.Location = new System.Drawing.Point(0, 0);
+            this.buttonContestant.Name = "buttonContestant";
+            this.buttonContestant.Size = new System.Drawing.Size(179, 40);
+            this.buttonContestant.TabIndex = 4;
+            this.buttonContestant.Text = "Contestants";
+            this.buttonContestant.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonContestant.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonContestant.UseVisualStyleBackColor = true;
+            // 
+            // buttonExaminers
+            // 
+            this.buttonExaminers.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonExaminers.FlatAppearance.BorderSize = 0;
+            this.buttonExaminers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonExaminers.IconChar = FontAwesome.Sharp.IconChar.React;
+            this.buttonExaminers.IconColor = System.Drawing.Color.Black;
+            this.buttonExaminers.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.buttonExaminers.IconSize = 20;
+            this.buttonExaminers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonExaminers.Location = new System.Drawing.Point(0, 40);
+            this.buttonExaminers.Name = "buttonExaminers";
+            this.buttonExaminers.Size = new System.Drawing.Size(179, 40);
+            this.buttonExaminers.TabIndex = 5;
+            this.buttonExaminers.Text = "Examiners";
+            this.buttonExaminers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonExaminers.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonExaminers.UseVisualStyleBackColor = true;
+            // 
+            // buttonRounds
+            // 
+            this.buttonRounds.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonRounds.FlatAppearance.BorderSize = 0;
+            this.buttonRounds.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRounds.IconChar = FontAwesome.Sharp.IconChar.React;
+            this.buttonRounds.IconColor = System.Drawing.Color.Black;
+            this.buttonRounds.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.buttonRounds.IconSize = 20;
+            this.buttonRounds.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonRounds.Location = new System.Drawing.Point(0, 80);
+            this.buttonRounds.Name = "buttonRounds";
+            this.buttonRounds.Size = new System.Drawing.Size(179, 40);
+            this.buttonRounds.TabIndex = 6;
+            this.buttonRounds.Text = "Rounds";
+            this.buttonRounds.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonRounds.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonRounds.UseVisualStyleBackColor = true;
+            // 
+            // buttonAbout
+            // 
+            this.buttonAbout.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonAbout.FlatAppearance.BorderSize = 0;
+            this.buttonAbout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAbout.IconChar = FontAwesome.Sharp.IconChar.React;
+            this.buttonAbout.IconColor = System.Drawing.Color.Black;
+            this.buttonAbout.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.buttonAbout.IconSize = 20;
+            this.buttonAbout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonAbout.Location = new System.Drawing.Point(0, 228);
+            this.buttonAbout.Name = "buttonAbout";
+            this.buttonAbout.Size = new System.Drawing.Size(179, 40);
+            this.buttonAbout.TabIndex = 7;
+            this.buttonAbout.Text = "About";
+            this.buttonAbout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonAbout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonAbout.UseVisualStyleBackColor = true;
             // 
             // MainScreen
             // 
@@ -109,7 +174,10 @@ namespace SPV102_CS486_Team13.Screen
         private System.Windows.Forms.Panel panelLeft;
         private System.Windows.Forms.Panel panelTop;
         private System.Windows.Forms.Panel panelMain;
-        private System.Windows.Forms.Button buttonAbout;
-        private System.Windows.Forms.Button button1;
+        private FontAwesome.Sharp.IconButton buttonContestant;
+        private System.Windows.Forms.Panel panelRound;
+        private FontAwesome.Sharp.IconButton buttonRounds;
+        private FontAwesome.Sharp.IconButton buttonExaminers;
+        private FontAwesome.Sharp.IconButton buttonAbout;
     }
 }
