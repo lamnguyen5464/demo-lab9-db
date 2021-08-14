@@ -67,11 +67,33 @@ namespace SPV102_CS486_Team13.Screen
         private void buttonContestant_Click(object sender, EventArgs e)
         {
             List<Contestant> contestants = AppRepo.getInstnace().getAllContestant();
+            foreach (Control item in panelMain.Controls.OfType<Control>().ToList())
+            {
+                    panelMain.Controls.Remove(item);
+            }
             for (int i = contestants.Count -1; i>=0; i--)
             {
                 ContestantItem add = new ContestantItem(
                     contestants[i].name, "","",""
                     );
+                add.Dock = DockStyle.Top;
+                panelMain.Controls.Add(add);
+            }
+        }
+
+        private void buttonExaminers_Click(object sender, EventArgs e)
+        {
+            List<Examiner> examiners = AppRepo.getInstnace().getAllExaminers();
+            foreach (Control item in panelMain.Controls.OfType<Control>().ToList())
+            {
+                panelMain.Controls.Remove(item);
+            }
+            for (int i = examiners.Count - 1; i >= 0; i--)
+            {
+                ContestantItem add = new ContestantItem(
+                    examiners[i].name, "", "", ""
+                    );
+                add.Dock = DockStyle.Top;
                 panelMain.Controls.Add(add);
             }
         }
