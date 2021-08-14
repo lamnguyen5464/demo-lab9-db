@@ -147,6 +147,7 @@ namespace SPV102_CS486_Team13.Screen
             this.panelTop.Name = "panelTop";
             this.panelTop.Size = new System.Drawing.Size(706, 40);
             this.panelTop.TabIndex = 1;
+            this.panelTop.Paint += new System.Windows.Forms.PaintEventHandler(this.panelTop_Paint);
             // 
             // panelMain
             // 
@@ -159,7 +160,7 @@ namespace SPV102_CS486_Team13.Screen
             // 
             // MainScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.panelTop);

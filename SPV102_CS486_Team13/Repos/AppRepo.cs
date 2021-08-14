@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using SPV102_CS486_Team13.Helpers;
 using SPV102_CS486_Team13.Models;
 using System.Data;
-using SPV102_CS486_Team13.Models;
 using System.Windows.Forms;
 
 namespace SPV102_CS486_Team13.Repos
@@ -14,7 +13,7 @@ namespace SPV102_CS486_Team13.Repos
     class AppRepo
     {
         private static AppRepo instance = null;
-        private static Boolean isDev = true;
+        private static Boolean isDev = false;
         private AppRepo() { }
 
         public static AppRepo getInstnace()
@@ -34,7 +33,7 @@ namespace SPV102_CS486_Team13.Repos
             }
 
             List<Contestant> list = new List<Contestant>();
-            String sqlString = $"SELECT * FROM";
+            String sqlString = $"exec dbo.sp_getListContestants";
             DataTable result = DatabaseHelper.query(sqlString);
             foreach(DataRow row in result.Rows)
             {
@@ -56,7 +55,7 @@ namespace SPV102_CS486_Team13.Repos
             }
 
             List<Examiner> list = new List<Examiner>();
-            String sqlString = $"SELECT * FROM Examiners";
+            String sqlString = $"exec dbo.sp_getListExaminers";
             DataTable result = DatabaseHelper.query(sqlString);
             foreach(DataRow row in result.Rows)
             {
@@ -70,14 +69,14 @@ namespace SPV102_CS486_Team13.Repos
             return list;
         }
 
-        public List<Contestant> getListContestantsByRoundId()
+        public List<Contestant> getListContestantsByRoundId(String roundId)
         {
             if (isDev)
             {
                 return Contestant.getMockdata();
             }
             List<Contestant> list = new List<Contestant>();
-            String sqlString = $"SELECT * FROM";
+            String sqlString = $"exec dbo.sp_getContestantsByRoundId {roundId}";
             DataTable result = DatabaseHelper.query(sqlString);
             foreach (DataRow row in result.Rows)
             {
@@ -100,7 +99,7 @@ namespace SPV102_CS486_Team13.Repos
             }
 
             List<Round> list = new List<Round>();
-            String sqlString = $"SELECT * FROM";
+            String sqlString = $"exec dbo.sp_getListRounds";
             DataTable result = DatabaseHelper.query(sqlString);
             foreach(DataRow row in result.Rows)
             {

@@ -75,5 +75,10 @@ namespace SPV102_CS486_Team13.Screen
                 panelMain.Controls.Add(add);
             }
         }
+
+        private void panelTop_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -20,8 +20,14 @@ namespace SPV102_CS486_Team13.Helpers
             {
                 sqlConnection.Open();
                 SqlDataAdapter adapter = new SqlDataAdapter(sqlCommand, sqlConnection);
-                adapter.Fill(dataSet);
-                sqlConnection.Close();
+                try
+                {
+                    adapter.Fill(dataSet);
+                    sqlConnection.Close();
+                }catch(SqlException e)
+                {
+                    MessageBox.Show(e.Message);
+                }
             }
             return dataSet.Tables[0];
         }
