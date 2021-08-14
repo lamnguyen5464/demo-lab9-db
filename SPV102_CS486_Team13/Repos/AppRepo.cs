@@ -85,6 +85,8 @@ namespace SPV102_CS486_Team13.Repos
                 model.name = row["name"].ToString();
                 model.birthday = row["birthday"].ToString();
                 model.moreInfo = row["moreInfo"].ToString();
+                model.averageScore = row["averageScore"].ToString();
+                model.role = row["role"].ToString();
                 list.Add(model);
             }
             return list;

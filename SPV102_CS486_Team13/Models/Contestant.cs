@@ -12,7 +12,7 @@ namespace SPV102_CS486_Team13.Models
         public String name;
         public String birthday;
         public String moreInfo;
-
+        public String role;
         public String averageScore;
 
 

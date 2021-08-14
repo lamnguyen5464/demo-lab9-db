@@ -42,6 +42,7 @@ namespace SPV102_CS486_Team13.Screen
             // 
             // panelLeft
             // 
+            this.panelLeft.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panelLeft.Controls.Add(this.buttonAbout);
             this.panelLeft.Controls.Add(this.panelRound);
             this.panelLeft.Controls.Add(this.buttonRounds);
