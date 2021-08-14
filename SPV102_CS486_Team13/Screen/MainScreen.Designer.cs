@@ -119,6 +119,7 @@ namespace SPV102_CS486_Team13.Screen
             this.buttonExaminers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonExaminers.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonExaminers.UseVisualStyleBackColor = true;
+            this.buttonExaminers.Click += new System.EventHandler(this.buttonExaminers_Click);
             // 
             // buttonContestant
             // 

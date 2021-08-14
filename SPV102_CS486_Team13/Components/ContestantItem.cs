@@ -19,6 +19,9 @@ namespace SPV102_CS486_Team13.Components
             this.nameString = name;
 
             buttonName.Text = name;
+            buttonBD.Text = bd;
+            buttonUni.Text = university;
+            buttonInfo.Text = moreInfo;
         }
     }
 }

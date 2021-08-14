@@ -103,7 +103,10 @@ namespace SPV102_CS486_Team13.Repos
             DataTable result = DatabaseHelper.query(sqlString);
             foreach(DataRow row in result.Rows)
             {
-
+                Round model = new Round();
+                model.id = row["Id"].ToString();
+                model.name = row["name"].ToString();
+                list.Add(model);
             }
             return list;
         }

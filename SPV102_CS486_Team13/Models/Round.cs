@@ -9,6 +9,7 @@ namespace SPV102_CS486_Team13.Models
     class Round
     {
         public String id;
+        public String name;
         public int roundNumber;
         public int numberReverse;
         public int numberOfficial;

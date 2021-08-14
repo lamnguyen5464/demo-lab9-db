@@ -29,91 +29,84 @@ namespace SPV102_CS486_Team13.Components
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelLayout = new System.Windows.Forms.Panel();
             this.buttonName = new System.Windows.Forms.Button();
-            this.buttonBirthday = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
+            this.buttonBD = new System.Windows.Forms.Button();
+            this.buttonUni = new System.Windows.Forms.Button();
+            this.buttonInfo = new System.Windows.Forms.Button();
+            this.panelLayout.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // panelLayout
             // 
-            this.panel1.Controls.Add(this.buttonBirthday);
-            this.panel1.Controls.Add(this.buttonName);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(386, 79);
-            this.panel1.TabIndex = 0;
+            this.panelLayout.Controls.Add(this.buttonInfo);
+            this.panelLayout.Controls.Add(this.buttonUni);
+            this.panelLayout.Controls.Add(this.buttonBD);
+            this.panelLayout.Controls.Add(this.buttonName);
+            this.panelLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelLayout.Location = new System.Drawing.Point(0, 0);
+            this.panelLayout.Name = "panelLayout";
+            this.panelLayout.Size = new System.Drawing.Size(901, 58);
+            this.panelLayout.TabIndex = 0;
             // 
             // buttonName
             // 
-            this.buttonName.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonName.Dock = System.Windows.Forms.DockStyle.Left;
             this.buttonName.Location = new System.Drawing.Point(0, 0);
             this.buttonName.Name = "buttonName";
-            this.buttonName.Size = new System.Drawing.Size(386, 38);
+            this.buttonName.Size = new System.Drawing.Size(266, 58);
             this.buttonName.TabIndex = 0;
-            this.buttonName.Text = "button1";
+            this.buttonName.Text = "Name";
             this.buttonName.UseVisualStyleBackColor = true;
             // 
-            // buttonBirthday
+            // buttonBD
             // 
-            this.buttonBirthday.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonBirthday.Location = new System.Drawing.Point(0, 38);
-            this.buttonBirthday.Name = "buttonBirthday";
-            this.buttonBirthday.Size = new System.Drawing.Size(386, 41);
-            this.buttonBirthday.TabIndex = 1;
-            this.buttonBirthday.Text = "button2";
-            this.buttonBirthday.UseVisualStyleBackColor = true;
+            this.buttonBD.Dock = System.Windows.Forms.DockStyle.Left;
+            this.buttonBD.Location = new System.Drawing.Point(266, 0);
+            this.buttonBD.Name = "buttonBD";
+            this.buttonBD.Size = new System.Drawing.Size(130, 58);
+            this.buttonBD.TabIndex = 1;
+            this.buttonBD.Text = "BD";
+            this.buttonBD.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // buttonUni
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button1.Location = new System.Drawing.Point(386, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(433, 79);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonUni.Dock = System.Windows.Forms.DockStyle.Left;
+            this.buttonUni.Location = new System.Drawing.Point(396, 0);
+            this.buttonUni.Name = "buttonUni";
+            this.buttonUni.Size = new System.Drawing.Size(196, 58);
+            this.buttonUni.TabIndex = 2;
+            this.buttonUni.Text = "Uni";
+            this.buttonUni.UseVisualStyleBackColor = true;
             // 
-            // iconPictureBox1
+            // buttonInfo
             // 
-            this.iconPictureBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.iconPictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.iconPictureBox1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconPictureBox1.IconColor = System.Drawing.SystemColors.ControlText;
-            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.IconSize = 79;
-            this.iconPictureBox1.Location = new System.Drawing.Point(819, 0);
-            this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(82, 79);
-            this.iconPictureBox1.TabIndex = 2;
-            this.iconPictureBox1.TabStop = false;
+            this.buttonInfo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonInfo.Location = new System.Drawing.Point(592, 0);
+            this.buttonInfo.Name = "buttonInfo";
+            this.buttonInfo.Size = new System.Drawing.Size(309, 58);
+            this.buttonInfo.TabIndex = 3;
+            this.buttonInfo.Text = "Moreinfo";
+            this.buttonInfo.UseVisualStyleBackColor = true;
             // 
             // ContestantItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.iconPictureBox1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelLayout);
             this.Name = "ContestantItem";
-            this.Size = new System.Drawing.Size(901, 79);
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
+            this.Size = new System.Drawing.Size(901, 58);
+            this.panelLayout.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button buttonBirthday;
+        private System.Windows.Forms.Panel panelLayout;
+        private System.Windows.Forms.Button buttonInfo;
+        private System.Windows.Forms.Button buttonUni;
+        private System.Windows.Forms.Button buttonBD;
         private System.Windows.Forms.Button buttonName;
-        private System.Windows.Forms.Button button1;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
     }
 }
