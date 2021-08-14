@@ -18,7 +18,7 @@ create table Examiners (
 )
 
 create table Rounds (
-	Id int primary key identity(1,1),
+	Id int primary key identity(2,1),
 	name nvarchar(50),
 	numberReserve int,
 	numberOfficial int,
@@ -34,7 +34,7 @@ create table Results(
 	Role nvarchar(50) --check (Role in ('official', 'reverse'))	
 	foreign key (ContestantID) references Contestants(Id),
 	foreign key (ExaminerID) references Examiners(Id),
-	foreign key (RoundID) references Rounds(ID),
+	--foreign key (RoundID) references Rounds(Id),
 )
 ----------------------------------- INSERTION
 -- Contestants
@@ -62,6 +62,7 @@ values
 (N'',4,1)
 
 go
+
 insert into Results(ContestantID,ExaminerID,RoundID,Role,Feedback,Score)
 values
 (1,1,1,N'',N'Good',10),
@@ -80,6 +81,7 @@ values
 (5,2,1,N'',N'Excellent',10),
 (5,3,1,N'',N'Excellent',10)
 
+SELECT * FROM Results;
 
 ----------------------------------- TRIGGER 
 --create trigger tg_checkOfficialAndReverse 

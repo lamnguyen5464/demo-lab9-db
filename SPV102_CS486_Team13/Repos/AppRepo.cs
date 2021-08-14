@@ -7,13 +7,14 @@ using SPV102_CS486_Team13.Helpers;
 using SPV102_CS486_Team13.Models;
 using System.Data;
 using SPV102_CS486_Team13.Models;
+using System.Windows.Forms;
 
 namespace SPV102_CS486_Team13.Repos
 {
     class AppRepo
     {
         private static AppRepo instance = null;
-        private static Boolean isDev = true;
+        private static Boolean isDev = false;
         private AppRepo() { }
 
         public static AppRepo getInstnace()
@@ -37,7 +38,12 @@ namespace SPV102_CS486_Team13.Repos
             DataTable result = DatabaseHelper.query(sqlString);
             foreach(DataRow row in result.Rows)
             {
-
+                Contestant model = new Contestant();
+                model.id = row["id"].ToString();
+                model.name = row["name"].ToString();
+                model.birthday = row["birthday"].ToString();
+                model.moreInfo = row["moreInfo"].ToString();
+                list.Add(model);
             }
             return list;
         }
@@ -50,11 +56,37 @@ namespace SPV102_CS486_Team13.Repos
             }
 
             List<Examiner> list = new List<Examiner>();
-            String sqlString = $"SELECT * FROM";
+            String sqlString = $"SELECT * FROM Examiners";
             DataTable result = DatabaseHelper.query(sqlString);
             foreach(DataRow row in result.Rows)
             {
+                Examiner model = new Examiner();
+                model.id = row["id"].ToString();
+                model.name = row["name"].ToString();
+                model.birthday = row["birthday"].ToString();
+                model.moreInfo = row["moreInfo"].ToString();
+                list.Add(model);
+            }
+            return list;
+        }
 
+        public List<Contestant> getListContestantsByRoundId()
+        {
+            if (isDev)
+            {
+                return 
+            }
+            List<Contestant> list = new List<Contestant>();
+            String sqlString = $"SELECT * FROM";
+            DataTable result = DatabaseHelper.query(sqlString);
+            foreach (DataRow row in result.Rows)
+            {
+                Contestant model = new Contestant();
+                model.id = row["id"].ToString();
+                model.name = row["name"].ToString();
+                model.birthday = row["birthday"].ToString();
+                model.moreInfo = row["moreInfo"].ToString();
+                list.Add(model);
             }
             return list;
         }
